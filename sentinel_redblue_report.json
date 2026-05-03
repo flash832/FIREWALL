@@ -1,0 +1,43 @@
+{
+  "timestamp": "2026-05-03T00:50:48.520248",
+  "total_rounds": 2,
+  "red_wins": 0,
+  "blue_wins": 2,
+  "errors": 0,
+  "false_positive_skips": 0,
+  "blue_win_rate_pct": 100.0,
+  "new_rules_learned": 0,
+  "gaps_patched": 0,
+  "red_reward_score": 0,
+  "blue_defense_score": 10,
+  "red_mutation_weights": {
+    "leetspeak": 1.0,
+    "prefix": 1.0,
+    "suffix": 1.0,
+    "synonym": 1.0,
+    "split": 1.0,
+    "unicode": 1.0,
+    "case": 1.0,
+    "combined": 1.0
+  },
+  "generations_evolved": 0,
+  "rules_version": 0,
+  "history": [
+    {
+      "round": 1,
+      "mutation": "combined",
+      "bypassed": false,
+      "verdict": "MALICIOUS",
+      "score": 90.0,
+      "latency_ms": 215.39
+    },
+    {
+      "round": 2,
+      "mutation": "case",
+      "bypassed": false,
+      "verdict": "MALICIOUS",
+      "score": 90.0,
+      "latency_ms": 1.2
+    }
+  ]
+}

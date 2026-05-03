@@ -1,0 +1,30 @@
+[build-system]
+# FIX 1: Cython removed from required — it is optional
+# Normal users doing `pip install sentinel-sd` don't need Cython
+requires = ["setuptools>=65", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sentinel-sd"
+version = "3.3.2"
+description = "Sentinel Security Kernel: Zero-Trust AI Firewall for Prompt Injection & Jailbreak Defense."
+readme = "README.md"
+requires-python = ">=3.8"
+license = {text = "MIT"}
+
+dependencies = [
+    "sentence-transformers>=2.0.0",
+]
+
+[project.optional-dependencies]
+# Install Cython only if you want to compile C extensions
+cython = ["Cython>=3.0.0"]
+
+[project.scripts]
+sentinel-scan = "sentinel_shield.core:main"
+
+[tool.setuptools.packages.find]
+where = ["."]
+
+[tool.setuptools.package-data]
+sentinel_shield = ["*.md", "*.json"]
